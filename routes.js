@@ -17,7 +17,7 @@ const routAPINames = () => __awaiter(void 0, void 0, void 0, function* () {
         data = (yield response.json());
     }
     catch (err) {
-        return err;
+        return "Error";
     }
     const names = data
         .map((item) => `id: ${item.id}, name: ${item.name}`)
