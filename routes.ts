@@ -11,7 +11,7 @@ const routAPINames = async (): Promise<string> => {
         data = (await response.json()) as responseItemType[];
 
     } catch (err) {
-        return err;
+        return "Error";
     }
     const names = data
     .map((item) => `id: ${item.id}, name: ${item.name}`)
